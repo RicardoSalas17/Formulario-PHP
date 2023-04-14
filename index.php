@@ -1,4 +1,6 @@
 <?php
+
+require("mail.php");
 function validate($name, $email, $subject, $message, $form)
 {
     return !empty($name) && !empty($email) && !empty($subject) && !empty($message);
@@ -10,7 +12,14 @@ if (isset($_POST["form"])) {
         $email = $_POST["email"];
         $subject = $_POST["subject"];
         $message = $_POST["message"];
+        $body="
+        $name <$email> te envia el siguiente mensaje: 
+        <br>
+        <br>
+        $message
+        ";
         //Mandar el Correo
+        sendMail($subject,$body,$email,$name, true);
         $status = "success";
     } else {
         $status = "danger";
@@ -69,7 +78,7 @@ if (isset($_POST["form"])) {
                 <span>Avenida Viznaga,Queretaro.</span>
             </div>
             <div class="contact-info">
-                <span>5539963312</span>
+                <span>55-39-96-33-12</span>
             </div>
         </div>
     </form>
