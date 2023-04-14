@@ -14,10 +14,14 @@ if (isset($_POST["form"])) {
         $message = $_POST["message"];
         $body="
          <br>
-        $name
          <br>
-          $email 
-          te envia el siguiente mensaje: 
+        Nombre: $name
+         <br>
+         <br>
+         E-mail:  $email 
+         <br>
+         <br>
+        Te envia el siguiente mensaje: 
         <br>
         <br>
         $message
@@ -56,7 +60,7 @@ if (isset($_POST["form"])) {
     <?php endif; ?>
 
     <form action="./" method="post" class="form-style">
-        <h1>Contactanos!!</h1>
+        <h1>Contactame! </h1>
         <div class="input-container">
             <label class="label-style" for="name">Nombre:</label>
             <input type="text" name="name" id="name">
