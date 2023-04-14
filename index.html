@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script src="https://kit.fontawesome.com/7f6d17e882.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Formulario de Contacto con PHP</title>
 </head>
-<body>
-    <div>
-        <span>Surgio un problema</span>
+<body class="body-style">
+    <div class="status-message error">
+        <span>Surgió un problema</span>
     </div>
-    <div>
+    <div class="status-message success">
         <span>Mensaje enviado</span>
     </div>
-    <form action="#">
+    <form action="./" class="form-style">
         <h1>Contactanos!!</h1>
-        <label for="name">Nombre:</label>
-        <input type="text" name="name" id="name">
-        <label for="email">Correo:</label>
-        <input type="email" name="email" id="email">
-        <label for="subject">Asunto:</label>
-        <input type="text" name="subject" id="subject">
-        <label for="message">Mensaje:</label>
-        <textarea type="text" id="message"></textarea>
-        <button type="submit">Enviar</button>
-
-        <div>
-        <div>
-            <span>61 avenida Viznaga.</span>
+        <div class="input-container">
+            <label class="label-style" for="name">Nombre:</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="input-container">
+            <label class="label-style" for="email">Correo:</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="input-container">
+            <label class="label-style" for="subject">Asunto:</label>
+            <input type="text" name="subject" id="subject">
+        </div>
+        <div class="input-container">
+            <label class="label-style" for="message">Mensaje:</label>
+            <textarea type="text" id="message"></textarea>
         </div>
         <div>
-            <span>5539963312</span>
+            <button type="submit">Enviar</button>
         </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <i class="fa-regular fa-location-dot style-icon"></i>
+                <span>Avenida Viznaga,Queretaro.</span>
+            </div>
+            <div class="contact-info">
+                <span>5539963312</span>
+            </div>
         </div>
-
     </form>
+
 </body>
 </html>
