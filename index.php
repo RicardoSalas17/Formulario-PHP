@@ -13,7 +13,11 @@ if (isset($_POST["form"])) {
         $subject = $_POST["subject"];
         $message = $_POST["message"];
         $body="
-        $name <$email> te envia el siguiente mensaje: 
+         <br>
+        $name
+         <br>
+          $email 
+          te envia el siguiente mensaje: 
         <br>
         <br>
         $message
